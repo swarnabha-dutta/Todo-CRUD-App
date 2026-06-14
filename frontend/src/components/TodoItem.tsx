@@ -24,7 +24,9 @@ const TodoItem = ({
             "Update Todo",
             todo.title,
         );
-        if(!newTitle.trim())return;
+
+        if (newTitle === null) return;
+        if (newTitle.trim() === "") return;
         onUpdate(todo._id,newTitle);
     };
     return (
